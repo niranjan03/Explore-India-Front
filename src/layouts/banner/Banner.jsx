@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react' 
 import { useState } from 'react';
-import { filterData } from './bannerData';
+import { filterData, bannerSlides } from './bannerData';
 const Banner = () => {
-
+  // Carousel
+  const [currentSlide, setCurrentSlide] = useState(0);
 // State to track selected values
   const [selectedState, setSelectedState] = useState("Rajasthan");
   const [selectedPlace, setSelectedPlace] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+ 
+  //Automatically cycle banner images and text every 5 sec
+  useEffect(()=>{
+    const sliderTimer = setInterval(()=>{
+      setCurrentSlide((prev)=>(prev + 1)%bannerSlides.length);
+
+    },5000);
+    return () => clearInterval(sliderTimer);
+  },[]);
+
 
   // Get the list of places based on the currently selected/hovered state
   const availablePlaces = filterData[selectedState]?.places || [];
@@ -22,31 +33,40 @@ const Banner = () => {
   };
 
   return (
-    <div className='relative h-[85vh] w-full flex flex-col items-center justify-center bg-zinc-900 overflow-hidden'>
+    <div className='relative h-[90vh] w-full flex flex-col items-center justify-center bg-zinc-950 overflow-hidden'>
+      {/* background image carousel layout */}
       <div className="absolute inset-0 z-0">
+      {bannerSlides.map((slide, index)=>(
+      <div
+      key={slide.id}
+      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index===currentSlide ? 'opacity-60' : 'opacity-0'}`}
+      >
         <img 
-          src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=80" 
-          alt="Taj Mahal India" 
-          className="w-full h-full object-cover opacity-60"
+        src={slide.image}
+        alt={slide.title}
+        className="w-full h-full objet-cover scale-105 transition-transform duration-[5000ms] ease-linear"
         />
+      </div>      
+      ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
       </div>
 
-      {/* Main Typography Header Section */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mb-12 animate-fade-in">
-        <span className="text-orange-400 font-semibold tracking-widest text-sm uppercase block mb-3">
-          Incredible India
+      {/* Main Typography Header Section */}{/* DYNAMIC TEXT DISPLAY SECTION */}
+
+      <div className="relative z-10 text-center px-4 max-w-4xl mb-10 min-h-[180px] flex flex-col justify-center">
+        <span className="text-orange-400 font-semibold tracking-widest text-xs md:text-sm uppercase block mb-3 transintion-all duration-500">
+          {bannerSlides[currentSlide].tagline}
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-md font-serif mb-4">
-          Discover India's Eternal Heritage
+        <h1 className="text-3xl md:text-6xl font-bold text-white tracking-tight drop-shadow-md font-serif mb-4 transintion-all duration-500">
+          {bannerSlides[currentSlide].title}
         </h1>
-        <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-sm font-light">
-          Explore majestic palaces, ancient temples, serene beaches, and mist-covered mountains.
+        <p className="text-gray-200 text-base md:text-lg max-w-2xl mx-auto drop-shadow-sm font-light transintion-all duration-500">
+          {bannerSlides[currentSlide].description}
         </p>
       </div>
       
       {/* SEARCH BAR WIDGET - Positioned lower middle */}
-      <div className="relative z-20 w-full max-w-4xl px-4 mt-4">
+      <div className="relative z-20 w-full max-w-4xl px-4 mt-2">
         <form 
           onSubmit={handleSearchSubmit}
           className="bg-white/95 backdrop-blur-md p-4 md:p-3 rounded-2xl md:rounded-full shadow-2xl flex flex-col md:flex-row items-center gap-3 border border-white/20"
@@ -127,6 +147,19 @@ const Banner = () => {
           </button>
 
         </form>
+      </div>
+
+      {/* CAROUSEL SLIDE INDICATOR DOTS */}
+      <div className='absolute bottom-6 z-20 flex gap-2'>
+        {bannerSlides.map((_, idx)=>(
+        <button
+        key={idx}
+        onClick={() => setCurrentSlide(idx)}
+        className={`h-2 transition-all rounded-full ${
+          idx=== currentSlide ? 'w-6 bg-orange-500' : 'w-2 bg-white/40'
+        }`}
+        />
+        ))}
       </div>
       
     </div>
