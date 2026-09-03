@@ -8,6 +8,8 @@ import Footer from './layouts/footer/Footer';
 import AdminLogin from './components/admin/AdminLogin';
 import DashboardOverview from './pages/admin/DashboardOverview';
 import ManagePlaces from './pages/admin/ManagePlaces';
+import Explore from './pages/Explore';
+import PlaceDetails from './pages/PlaceDetails';
 
 // Simple guard checking for the presence of your admin access token
 const ProtectedRoute = ({ children }) => {
@@ -23,6 +25,8 @@ function App() {
       {/* Public Routes Go Here */}
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
+      <Route path='/explore' element={<Explore />} />
+      <Route path='/place/:name' element={<PlaceDetails />} />
 
 
       {/* Protected Admin Routes */}

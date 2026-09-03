@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react' 
-import { useState } from 'react';
-import { filterData, bannerSlides } from './bannerData';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { bannerSlides } from './bannerData';
+import jsonData from '../../data.json'
+const destinations = jsonData.destinations || [];
+
 const Banner = () => {
+  const navigate = useNavigate();
   // Carousel
   const [currentSlide, setCurrentSlide] = useState(0);
 // State to track selected values
-  const [selectedState, setSelectedState] = useState("Rajasthan");
-  const [selectedPlace, setSelectedPlace] = useState("");
+  const [state, setState] = useState("");
+  const [name, setName] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
- 
+  const stateNames = [...new Set(destinations.map((destination) => destination.location.state))].sort();
+
   //Automatically cycle banner images and text every 5 sec
   useEffect(()=>{
     const sliderTimer = setInterval(()=>{
@@ -20,16 +25,17 @@ const Banner = () => {
 
 
   // Get the list of places based on the currently selected/hovered state
-  const availablePlaces = filterData[selectedState]?.places || [];
+  const availablePlaces = destinations
+    .filter((destination) => !state || destination.location.state === state)
+    .map((destination) => destination.name);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    console.log("Searching for:", {
-      state: selectedState,
-      place: selectedPlace,
-      text: searchQuery
-    });
-    // Link this to your search results page/routing logic later
+    const params = new URLSearchParams();
+    if (state) params.set('state', state);
+    if (name) params.set('place', name);
+    if (searchQuery.trim()) params.set('q', searchQuery.trim());
+    navigate(`/explore?${params.toString()}`);
   };
 
   return (
@@ -78,24 +84,20 @@ const Banner = () => {
               Select State
             </label>
             <select
-              value={selectedState}
+              value={state}
               onChange={(e) => {
-                setSelectedState(e.target.value);
-                setSelectedPlace(""); // Reset 2nd dropdown when 1st changes
+                setState(e.target.value);
+                setName(""); // Reset 2nd dropdown when 1st changes
               }}
               className="w-full bg-transparent text-gray-800 font-medium focus:outline-none cursor-pointer appearance-none"
             >
-              {Object.keys(filterData).map((stateKey) => (
+              <option value="">All States</option>
+              {stateNames.map((stateKey) => (
                 <option 
                   key={stateKey} 
                   value={stateKey}
-                  // Changes 2nd dropdown data dynamically when mouse hovers over an option
-                  onMouseEnter={() => {
-                    setSelectedState(stateKey);
-                    setSelectedPlace("");
-                  }}
                 >
-                  {filterData[stateKey].label}
+                  {stateKey}
                 </option>
               ))}
             </select>
@@ -104,11 +106,11 @@ const Banner = () => {
           {/* Dropdown 2: Dynamic Places Selection */}
           <div className="w-full md:w-1/4 relative px-3 border-b md:border-b-0 md:border-r border-gray-200 pb-3 md:pb-0">
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
-              Explore Palace/Site
+              Explore Place
             </label>
             <select
-              value={selectedPlace}
-              onChange={(e) => setSelectedPlace(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full bg-transparent text-gray-800 font-medium focus:outline-none cursor-pointer appearance-none"
               disabled={availablePlaces.length === 0}
             >

@@ -1,0 +1,857 @@
+{
+  "project": "Explore India",
+  "description": "Curated destinations across India's heritage, spiritual, mountain, coastal, and wildlife experiences.",
+  "destinations": [
+    {
+      "category": "Heritage & Palaces",
+      "name": "Mysore Palace (Amba Vilas)",
+      "location": {
+        "city": "Mysuru",
+        "state": "Karnataka",
+        "stateId": "KA",
+        "googleMapsUrl": "https://maps.google.com/?q=Mysore+Palace"
+      },
+      "summary": "An magnificent Indo-Saracenic royal seat renowned for its grand arches, opulent interiors, and spectacular night illuminations.",
+      "details": {
+        "history": "Originally built of wood, the present palace was commissioned after a fire in 1897 and completed in 1912.",
+        "architecture": "A blend of Hindu, Mughal, Rajput, and Gothic influences with ornate interiors, marble domes, and grand halls.",
+        "culturalSignificance": "The official residence of the Wodeyar Maharajas and a major focal point of the annual Mysore Dasara celebrations."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Ambavilasa Durbar Hall",
+        "Golden Royal Elephant Throne",
+        "Sunday evening illumination"
+      ],
+      "travelTips": {
+        "dressCode": "Modest casual attire is recommended; footwear may need to be deposited in designated areas.",
+        "entryFee": "Entry fees vary for Indian and international visitors; check official sources before visiting.",
+        "photographyRules": "Photography rules vary by section; photography may be restricted inside certain halls."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/palaces/mysore-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/palaces/mysore-durbar.jpg",
+          "https://images.exploreindia.com/palaces/mysore-night.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Heritage & Palaces",
+      "name": "Amber Fort",
+      "location": {
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "stateId": "RJ",
+        "googleMapsUrl": "https://maps.google.com/?q=Amber+Fort+Jaipur"
+      },
+      "summary": "A magnificent hilltop fort known for grand courtyards, ornate palaces, mirror work, and panoramic views.",
+      "details": {
+        "history": "Construction began under Raja Man Singh I in the late 16th century and was expanded by successive Rajput rulers.",
+        "architecture": "Rajput and Mughal architectural traditions are reflected in its gateways, courtyards, gardens, and decorative interiors.",
+        "culturalSignificance": "Amber Fort represents the royal heritage of Jaipur and the Kachwaha Rajput dynasty."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Sheesh Mahal",
+        "Ganesh Pol",
+        "Maota Lake views"
+      ],
+      "travelTips": {
+        "dressCode": "Comfortable clothing and walking shoes are recommended.",
+        "entryFee": "Ticket prices vary; check official monument information before visiting.",
+        "photographyRules": "Photography is generally permitted, subject to restrictions in selected areas."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/heritage/amber-fort-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/heritage/amber-fort-courtyard.jpg",
+          "https://images.exploreindia.com/heritage/amber-fort-view.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Heritage & Palaces",
+      "name": "City Palace",
+      "location": {
+        "city": "Udaipur",
+        "state": "Rajasthan",
+        "stateId": "RJ",
+        "googleMapsUrl": "https://maps.google.com/?q=City+Palace+Udaipur"
+      },
+      "summary": "A spectacular lakeside palace complex combining Rajput grandeur, ornate balconies, courtyards, and museum collections.",
+      "details": {
+        "history": "The palace complex was developed over centuries by the Mewar rulers beginning in the 16th century.",
+        "architecture": "Rajput architecture blends with Mughal influences, featuring towers, domes, courtyards, mirror work, and decorative mosaics.",
+        "culturalSignificance": "It reflects the long royal history of Mewar and remains one of Udaipur's defining cultural landmarks."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Mor Chowk",
+        "Peacock Mosaic",
+        "Lake Pichola views"
+      ],
+      "travelTips": {
+        "dressCode": "Smart casual attire and comfortable footwear are recommended.",
+        "entryFee": "Entry fees vary by museum and visitor category.",
+        "photographyRules": "Photography is generally allowed in designated areas, with restrictions in some museum sections."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/heritage/udaipur-city-palace-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/heritage/udaipur-city-palace-courtyard.jpg",
+          "https://images.exploreindia.com/heritage/udaipur-city-palace-lake.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Heritage & Palaces",
+      "name": "Mehrangarh Fort",
+      "location": {
+        "city": "Jodhpur",
+        "state": "Rajasthan",
+        "stateId": "RJ",
+        "googleMapsUrl": "https://maps.google.com/?q=Mehrangarh+Fort+Jodhpur"
+      },
+      "summary": "An imposing hilltop fort overlooking the Blue City, celebrated for massive walls, royal galleries, and intricate stonework.",
+      "details": {
+        "history": "Founded by Rao Jodha in 1459, the fort was expanded by later rulers of Marwar.",
+        "architecture": "The fortress combines imposing Rajput defensive architecture with richly decorated royal chambers.",
+        "culturalSignificance": "Mehrangarh preserves the history, art, arms, and traditions of the Marwar royal family."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Fort Ramparts",
+        "Phool Mahal",
+        "Blue City panorama"
+      ],
+      "travelTips": {
+        "dressCode": "Comfortable clothes and sturdy walking shoes are recommended.",
+        "entryFee": "Admission varies by visitor category and selected experiences.",
+        "photographyRules": "Photography is generally permitted, subject to museum restrictions."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/heritage/mehrangarh-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/heritage/mehrangarh-palace.jpg",
+          "https://images.exploreindia.com/heritage/mehrangarh-view.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Heritage & Palaces",
+      "name": "Taj Mahal",
+      "location": {
+        "city": "Agra",
+        "state": "Uttar Pradesh",
+        "stateId": "UP",
+        "googleMapsUrl": "https://maps.google.com/?q=Taj+Mahal+Agra"
+      },
+      "summary": "An iconic white-marble mausoleum renowned worldwide for its symmetry, craftsmanship, and timeless beauty.",
+      "details": {
+        "history": "Commissioned by Mughal emperor Shah Jahan in memory of Mumtaz Mahal and completed in the 17th century.",
+        "architecture": "An outstanding example of Mughal architecture with a symmetrical garden, marble dome, minarets, and intricate inlay work.",
+        "culturalSignificance": "The monument is a symbol of Mughal-era art and one of India's most recognized cultural landmarks."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Main Marble Mausoleum",
+        "Charbagh Gardens",
+        "Pietra Dura Inlay"
+      ],
+      "travelTips": {
+        "dressCode": "Modest comfortable clothing and comfortable walking shoes are recommended.",
+        "entryFee": "Ticket categories and prices vary; check official monument information.",
+        "photographyRules": "Photography is permitted in designated areas but restricted inside the mausoleum."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/heritage/taj-mahal-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/heritage/taj-mahal-sunrise.jpg",
+          "https://images.exploreindia.com/heritage/taj-mahal-garden.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Spiritual/Temples",
+      "name": "Kashi Vishwanath Temple",
+      "location": {
+        "city": "Varanasi",
+        "state": "Uttar Pradesh",
+        "stateId": "UP",
+        "googleMapsUrl": "https://maps.google.com/?q=Kashi+Vishwanath+Temple+Varanasi"
+      },
+      "summary": "One of India's most revered Shiva temples, located in the spiritual heart of Varanasi near the Ganges.",
+      "details": {
+        "history": "The temple has been rebuilt and restored multiple times over centuries and is associated with the ancient sacred traditions of Kashi.",
+        "architecture": "The temple complex features traditional North Indian temple forms and distinctive golden domes.",
+        "culturalSignificance": "It is one of the most important pilgrimage sites for devotees of Lord Shiva."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Golden Spire",
+        "Vishwanath Jyotirlinga",
+        "Ganga Ghats"
+      ],
+      "travelTips": {
+        "dressCode": "Modest traditional attire is recommended; security and entry rules apply.",
+        "entryFee": "Entry and special darshan arrangements vary; check official temple guidance.",
+        "photographyRules": "Photography is restricted in secure temple areas."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/temples/kashi-vishwanath-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/temples/kashi-ghat.jpg",
+          "https://images.exploreindia.com/temples/kashi-corridor.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Spiritual/Temples",
+      "name": "Golden Temple",
+      "location": {
+        "city": "Amritsar",
+        "state": "Punjab",
+        "stateId": "PB",
+        "googleMapsUrl": "https://maps.google.com/?q=Golden+Temple+Amritsar"
+      },
+      "summary": "A serene Sikh spiritual center surrounded by the sacred Amrit Sarovar and known for its golden sanctum.",
+      "details": {
+        "history": "The present complex developed over centuries and became a central place of Sikh worship and community service.",
+        "architecture": "The gilded upper structure combines Sikh architectural traditions with elegant domes, arches, and marble ornamentation.",
+        "culturalSignificance": "The Harmandir Sahib is one of the most important pilgrimage sites in Sikhism and represents equality, service, and devotion."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Golden Sanctum",
+        "Amrit Sarovar",
+        "Langar Service"
+      ],
+      "travelTips": {
+        "dressCode": "Head covering is required and visitors must remove footwear before entering.",
+        "entryFee": "Entry is generally free; special services may have separate arrangements.",
+        "photographyRules": "Photography is allowed in many outdoor areas, subject to visitor guidelines."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/temples/golden-temple-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/temples/golden-temple-night.jpg",
+          "https://images.exploreindia.com/temples/golden-temple-sarovar.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Spiritual/Temples",
+      "name": "Meenakshi Amman Temple",
+      "location": {
+        "city": "Madurai",
+        "state": "Tamil Nadu",
+        "stateId": "TN",
+        "googleMapsUrl": "https://maps.google.com/?q=Meenakshi+Amman+Temple+Madurai"
+      },
+      "summary": "A magnificent Dravidian temple complex famous for towering gopurams, colorful sculptures, and sacred halls.",
+      "details": {
+        "history": "The temple has ancient roots and was extensively expanded under the Nayak rulers.",
+        "architecture": "Classic Dravidian architecture is expressed through monumental gopurams, sculpted pillars, mandapams, and shrines.",
+        "culturalSignificance": "The temple is central to Madurai's religious identity and major cultural festivals."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Towering Gopurams",
+        "Thousand Pillar Hall",
+        "Golden Lotus Tank"
+      ],
+      "travelTips": {
+        "dressCode": "Modest traditional clothing is recommended; footwear must be removed.",
+        "entryFee": "Entry and special access fees vary by area and service.",
+        "photographyRules": "Photography restrictions apply in several inner areas."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/temples/meenakshi-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/temples/meenakshi-gopuram.jpg",
+          "https://images.exploreindia.com/temples/meenakshi-hall.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Spiritual/Temples",
+      "name": "Tirumala Venkateswara Temple",
+      "location": {
+        "city": "Tirupati",
+        "state": "Andhra Pradesh",
+        "stateId": "AP",
+        "googleMapsUrl": "https://maps.google.com/?q=Tirumala+Venkateswara+Temple"
+      },
+      "summary": "One of India's most visited pilgrimage centers, set among the scenic Tirumala Hills.",
+      "details": {
+        "history": "The temple has a long history of royal patronage and centuries of pilgrimage traditions.",
+        "architecture": "The complex follows traditional South Indian temple architecture with a prominent gold-covered sanctum.",
+        "culturalSignificance": "It is one of the most important Vaishnavite pilgrimage destinations in India."
+      },
+      "bestTimeToVisit": "September to February",
+      "keyHighlights": [
+        "Ananda Nilayam",
+        "Tirumala Hills",
+        "Traditional Laddu Prasadam"
+      ],
+      "travelTips": {
+        "dressCode": "Traditional or modest attire is required for several temple services.",
+        "entryFee": "Darshan and special-entry fees vary by booking category.",
+        "photographyRules": "Photography is prohibited in the main temple areas."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/temples/tirupati-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/temples/tirupati-gopuram.jpg",
+          "https://images.exploreindia.com/temples/tirupati-hills.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Nature/Mountains",
+      "name": "Manali",
+      "location": {
+        "city": "Manali",
+        "state": "Himachal Pradesh",
+        "stateId": "HP",
+        "googleMapsUrl": "https://maps.google.com/?q=Manali+Himachal+Pradesh"
+      },
+      "summary": "A scenic Himalayan destination surrounded by pine forests, mountain valleys, rivers, and snow-covered peaks.",
+      "details": {
+        "history": "Manali developed as a major Himalayan settlement and later became a popular mountain tourism destination.",
+        "architecture": "The region is characterized by traditional Himachali buildings alongside modern mountain resorts.",
+        "culturalSignificance": "Manali represents Himalayan culture and is a gateway to several high-altitude landscapes and adventure experiences."
+      },
+      "bestTimeToVisit": "March to June and October to February",
+      "keyHighlights": [
+        "Solang Valley",
+        "Old Manali",
+        "Rohtang region"
+      ],
+      "travelTips": {
+        "dressCode": "Layered clothing and sturdy footwear are recommended.",
+        "entryFee": "Attraction fees vary by location and season.",
+        "photographyRules": "Photography is generally allowed; follow local restrictions in protected areas."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/mountains/manali-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/mountains/manali-valley.jpg",
+          "https://images.exploreindia.com/mountains/solang.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Nature/Mountains",
+      "name": "Leh-Ladakh",
+      "location": {
+        "city": "Leh",
+        "state": "Ladakh",
+        "stateId": "LA",
+        "googleMapsUrl": "https://maps.google.com/?q=Leh+Ladakh"
+      },
+      "summary": "A dramatic high-altitude Himalayan region known for stark mountains, blue lakes, monasteries, and desert landscapes.",
+      "details": {
+        "history": "Ladakh has been shaped by centuries of Himalayan trade, Buddhist traditions, and mountain communities.",
+        "architecture": "Traditional monasteries and settlements feature Tibetan Buddhist architectural influences.",
+        "culturalSignificance": "Ladakh is renowned for its Buddhist heritage, distinctive landscapes, and resilient high-altitude culture."
+      },
+      "bestTimeToVisit": "May to September",
+      "keyHighlights": [
+        "Pangong Lake",
+        "Nubra Valley",
+        "Monasteries"
+      ],
+      "travelTips": {
+        "dressCode": "Carry warm layers, sun protection, and allow time for acclimatization.",
+        "entryFee": "Fees vary by attraction and protected-area requirements.",
+        "photographyRules": "Photography is generally allowed but may be restricted inside monasteries or sensitive sites."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/mountains/ladakh-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/mountains/pangong.jpg",
+          "https://images.exploreindia.com/mountains/nubra.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Nature/Mountains",
+      "name": "Munnar",
+      "location": {
+        "city": "Munnar",
+        "state": "Kerala",
+        "stateId": "KL",
+        "googleMapsUrl": "https://maps.google.com/?q=Munnar+Kerala"
+      },
+      "summary": "A lush hill station famous for rolling tea plantations, misty mountains, forests, and cool weather.",
+      "details": {
+        "history": "Munnar developed as a major tea-growing region during the colonial period.",
+        "architecture": "Tea estates, colonial-era structures, and traditional Kerala influences shape the region's visual character.",
+        "culturalSignificance": "Munnar is an important part of Kerala's hill tourism and tea-growing heritage."
+      },
+      "bestTimeToVisit": "September to May",
+      "keyHighlights": [
+        "Tea Gardens",
+        "Eravikulam National Park",
+        "Mattupetty Dam"
+      ],
+      "travelTips": {
+        "dressCode": "Light layers, comfortable shoes, and rain protection are useful.",
+        "entryFee": "Park and attraction fees vary.",
+        "photographyRules": "Photography is generally permitted except where restricted by protected-area rules."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/mountains/munnar-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/mountains/munnar-tea.jpg",
+          "https://images.exploreindia.com/mountains/munnar-hills.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Nature/Mountains",
+      "name": "Darjeeling",
+      "location": {
+        "city": "Darjeeling",
+        "state": "West Bengal",
+        "stateId": "WB",
+        "googleMapsUrl": "https://maps.google.com/?q=Darjeeling+West+Bengal"
+      },
+      "summary": "A charming Himalayan hill town known for tea gardens, colonial heritage, and spectacular mountain views.",
+      "details": {
+        "history": "Darjeeling grew as a hill station during the British period and became internationally known for its tea.",
+        "architecture": "Colonial buildings, Himalayan railway infrastructure, and traditional mountain architecture define the town.",
+        "culturalSignificance": "Darjeeling is celebrated for its tea culture, Himalayan heritage, and the UNESCO-recognized mountain railway."
+      },
+      "bestTimeToVisit": "March to May and October to December",
+      "keyHighlights": [
+        "Tiger Hill",
+        "Tea Gardens",
+        "Darjeeling Himalayan Railway"
+      ],
+      "travelTips": {
+        "dressCode": "Warm layers and comfortable walking shoes are recommended.",
+        "entryFee": "Attraction and transport fees vary.",
+        "photographyRules": "Photography is generally permitted in public areas and viewpoints."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/mountains/darjeeling-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/mountains/darjeeling-tea.jpg",
+          "https://images.exploreindia.com/mountains/darjeeling-train.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Coastal/Beaches",
+      "name": "Goa",
+      "location": {
+        "city": "Panaji",
+        "state": "Goa",
+        "stateId": "GA",
+        "googleMapsUrl": "https://maps.google.com/?q=Goa+India"
+      },
+      "summary": "India's celebrated coastal destination combining sandy beaches, Portuguese heritage, nightlife, and relaxed seaside culture.",
+      "details": {
+        "history": "Goa has a long maritime history and was influenced significantly by Portuguese rule.",
+        "architecture": "Portuguese churches, colonial houses, and traditional Goan buildings coexist with modern tourism infrastructure.",
+        "culturalSignificance": "Goa's coastal culture blends local traditions with Portuguese influences, cuisine, music, and festivals."
+      },
+      "bestTimeToVisit": "November to February",
+      "keyHighlights": [
+        "Baga Beach",
+        "Calangute Beach",
+        "Old Goa"
+      ],
+      "travelTips": {
+        "dressCode": "Light clothing, sun protection, and beach-appropriate attire are recommended.",
+        "entryFee": "Most beaches are free; individual attractions and activities have separate charges.",
+        "photographyRules": "Photography is generally allowed; respect restrictions at heritage and religious sites."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/beaches/goa-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/beaches/goa-baga.jpg",
+          "https://images.exploreindia.com/beaches/goa-sunset.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Coastal/Beaches",
+      "name": "Radhanagar Beach",
+      "location": {
+        "city": "Swaraj Dweep",
+        "state": "Andaman & Nicobar Islands",
+        "stateId": "AN",
+        "googleMapsUrl": "https://maps.google.com/?q=Radhanagar+Beach+Andaman"
+      },
+      "summary": "A world-renowned tropical beach known for soft white sand, clear waters, lush forests, and spectacular sunsets.",
+      "details": {
+        "history": "The Andaman Islands have a rich maritime and indigenous history shaped by diverse island communities.",
+        "architecture": "The natural landscape rather than built architecture defines the destination, with carefully managed visitor facilities.",
+        "culturalSignificance": "Radhanagar represents the pristine coastal and marine heritage of the Andaman Islands."
+      },
+      "bestTimeToVisit": "November to April",
+      "keyHighlights": [
+        "White Sand Beach",
+        "Sunset Views",
+        "Swimming"
+      ],
+      "travelTips": {
+        "dressCode": "Swimwear and light beach clothing are suitable; carry sun protection.",
+        "entryFee": "Beach access is generally regulated by local tourism authorities.",
+        "photographyRules": "Photography is generally allowed; follow local environmental and safety guidelines."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/beaches/radhanagar-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/beaches/radhanagar-sunset.jpg",
+          "https://images.exploreindia.com/beaches/radhanagar-coast.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Coastal/Beaches",
+      "name": "Varkala Beach",
+      "location": {
+        "city": "Varkala",
+        "state": "Kerala",
+        "stateId": "KL",
+        "googleMapsUrl": "https://maps.google.com/?q=Varkala+Beach+Kerala"
+      },
+      "summary": "A dramatic Kerala coastline featuring a red laterite cliff, Arabian Sea views, and a relaxed beach atmosphere.",
+      "details": {
+        "history": "Varkala has long been associated with pilgrimage, traditional trade, and coastal communities.",
+        "architecture": "The distinctive cliff landscape is complemented by traditional Kerala architecture and a lively cliff-top promenade.",
+        "culturalSignificance": "Varkala combines spiritual traditions with Kerala's coastal tourism culture."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Varkala Cliff",
+        "Papanasam Beach",
+        "Janardhana Swamy Temple"
+      ],
+      "travelTips": {
+        "dressCode": "Light clothing, comfortable footwear, and sun protection are recommended.",
+        "entryFee": "Beach access is generally free; activities and attractions may have separate charges.",
+        "photographyRules": "Photography is generally permitted."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/beaches/varkala-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/beaches/varkala-cliff.jpg",
+          "https://images.exploreindia.com/beaches/varkala-sunset.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Coastal/Beaches",
+      "name": "Om Beach",
+      "location": {
+        "city": "Gokarna",
+        "state": "Karnataka",
+        "stateId": "KA",
+        "googleMapsUrl": "https://maps.google.com/?q=Om+Beach+Gokarna"
+      },
+      "summary": "A scenic beach shaped like the sacred Om symbol, surrounded by rocky hills and Arabian Sea waters.",
+      "details": {
+        "history": "Gokarna developed as an important pilgrimage town and coastal settlement.",
+        "architecture": "Traditional temple architecture and simple coastal settlements characterize the region.",
+        "culturalSignificance": "Om Beach is part of Gokarna's unique combination of Hindu pilgrimage and beach tourism."
+      },
+      "bestTimeToVisit": "October to March",
+      "keyHighlights": [
+        "Om-Shaped Shoreline",
+        "Arabian Sea Sunset",
+        "Beach Walks"
+      ],
+      "travelTips": {
+        "dressCode": "Light beachwear and comfortable footwear are recommended.",
+        "entryFee": "Beach access is generally free; water activities may have separate fees.",
+        "photographyRules": "Photography is generally allowed."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/beaches/om-beach-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/beaches/om-beach-view.jpg",
+          "https://images.exploreindia.com/beaches/om-beach-sunset.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Coastal/Beaches",
+      "name": "Agatti Island",
+      "location": {
+        "city": "Agatti",
+        "state": "Lakshadweep",
+        "stateId": "LD",
+        "googleMapsUrl": "https://maps.google.com/?q=Agatti+Island+Lakshadweep"
+      },
+      "summary": "A tropical island destination surrounded by turquoise lagoons, coral reefs, and pristine beaches.",
+      "details": {
+        "history": "Lakshadweep's islands have centuries-old maritime links and distinctive island communities.",
+        "architecture": "Traditional island homes and small-scale coastal infrastructure complement the natural environment.",
+        "culturalSignificance": "Agatti showcases the marine culture, ecology, and island traditions of Lakshadweep."
+      },
+      "bestTimeToVisit": "October to May",
+      "keyHighlights": [
+        "Coral Reefs",
+        "Lagoon",
+        "Snorkeling"
+      ],
+      "travelTips": {
+        "dressCode": "Light tropical clothing, reef-safe sun protection, and comfortable sandals are recommended.",
+        "entryFee": "Entry and island access require applicable permits and travel arrangements.",
+        "photographyRules": "Photography is generally allowed but follow local environmental and security rules."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/beaches/agatti-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/beaches/agatti-lagoon.jpg",
+          "https://images.exploreindia.com/beaches/agatti-coral.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Wild India",
+      "name": "Jim Corbett National Park",
+      "location": {
+        "city": "Ramnagar",
+        "state": "Uttarakhand",
+        "stateId": "UK",
+        "googleMapsUrl": "https://maps.google.com/?q=Jim+Corbett+National+Park"
+      },
+      "summary": "India's oldest national park and a celebrated wildlife destination known for forests, rivers, elephants, and Bengal tigers.",
+      "details": {
+        "history": "Established in 1936 as Hailey National Park, it was later renamed in honor of conservationist Jim Corbett.",
+        "architecture": "The landscape is primarily natural, featuring sal forests, grasslands, rivers, and foothill ecosystems.",
+        "culturalSignificance": "Corbett is an important center for wildlife conservation and tiger habitat protection in India."
+      },
+      "bestTimeToVisit": "November to June",
+      "keyHighlights": [
+        "Bengal Tigers",
+        "Elephants",
+        "Jeep Safari"
+      ],
+      "travelTips": {
+        "dressCode": "Neutral outdoor clothing, sturdy shoes, and sun protection are recommended.",
+        "entryFee": "Safari fees and permits vary by zone and season.",
+        "photographyRules": "Photography is allowed from designated safari vehicles; do not disturb wildlife."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/wildlife/corbett-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/wildlife/corbett-tiger.jpg",
+          "https://images.exploreindia.com/wildlife/corbett-elephant.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Wild India",
+      "name": "Ranthambore National Park",
+      "location": {
+        "city": "Sawai Madhopur",
+        "state": "Rajasthan",
+        "stateId": "RJ",
+        "googleMapsUrl": "https://maps.google.com/?q=Ranthambore+National+Park"
+      },
+      "summary": "A renowned wildlife reserve where ancient fort ruins meet dry forests and one of India's best-known tiger habitats.",
+      "details": {
+        "history": "The park was once a royal hunting reserve before becoming a protected wildlife area.",
+        "architecture": "The landscape combines dry deciduous forests, lakes, rocky terrain, and historic ruins.",
+        "culturalSignificance": "Ranthambore is internationally recognized for tiger conservation and wildlife tourism."
+      },
+      "bestTimeToVisit": "October to June",
+      "keyHighlights": [
+        "Tiger Safari",
+        "Ranthambore Fort",
+        "Padam Lake"
+      ],
+      "travelTips": {
+        "dressCode": "Neutral outdoor clothing, sturdy footwear, and sun protection are recommended.",
+        "entryFee": "Safari permits and fees vary by vehicle, zone, and season.",
+        "photographyRules": "Photography is encouraged from designated vehicles; flash and disturbance of wildlife should be avoided."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/wildlife/ranthambore-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/wildlife/ranthambore-tiger.jpg",
+          "https://images.exploreindia.com/wildlife/ranthambore-lake.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Wild India",
+      "name": "Kaziranga National Park",
+      "location": {
+        "city": "Kohora",
+        "state": "Assam",
+        "stateId": "AS",
+        "googleMapsUrl": "https://maps.google.com/?q=Kaziranga+National+Park"
+      },
+      "summary": "A UNESCO World Heritage wildlife landscape famous for the Indian one-horned rhinoceros and rich wetland ecosystems.",
+      "details": {
+        "history": "The protected area evolved from conservation efforts begun in the early 20th century.",
+        "architecture": "Grasslands, wetlands, forests, and riverine habitats form the park's distinctive natural landscape.",
+        "culturalSignificance": "Kaziranga is a globally important conservation success story for the one-horned rhinoceros."
+      },
+      "bestTimeToVisit": "November to April",
+      "keyHighlights": [
+        "One-Horned Rhinoceros",
+        "Elephant Safari",
+        "Wetland Wildlife"
+      ],
+      "travelTips": {
+        "dressCode": "Neutral outdoor clothing, comfortable shoes, and rain protection are useful.",
+        "entryFee": "Safari and park entry fees vary by zone and season.",
+        "photographyRules": "Photography is allowed from designated safari areas; avoid flash and disturbance."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/wildlife/kaziranga-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/wildlife/kaziranga-rhino.jpg",
+          "https://images.exploreindia.com/wildlife/kaziranga-landscape.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Wild India",
+      "name": "Gir National Park",
+      "location": {
+        "city": "Sasan Gir",
+        "state": "Gujarat",
+        "stateId": "GJ",
+        "googleMapsUrl": "https://maps.google.com/?q=Gir+National+Park"
+      },
+      "summary": "A protected forest famous for the Asiatic lion and diverse dry deciduous wildlife.",
+      "details": {
+        "history": "The region became a protected habitat through conservation efforts to safeguard the last wild population of Asiatic lions.",
+        "architecture": "The landscape includes dry deciduous forests, grasslands, rocky hills, and seasonal streams.",
+        "culturalSignificance": "Gir is globally significant as the last natural stronghold of the Asiatic lion."
+      },
+      "bestTimeToVisit": "December to March",
+      "keyHighlights": [
+        "Asiatic Lions",
+        "Wildlife Safari",
+        "Gir Forest"
+      ],
+      "travelTips": {
+        "dressCode": "Neutral outdoor clothing, sturdy footwear, and sun protection are recommended.",
+        "entryFee": "Safari permits and entry fees vary by zone and season.",
+        "photographyRules": "Photography is permitted from designated vehicles; maintain distance from wildlife."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/wildlife/gir-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/wildlife/gir-lion.jpg",
+          "https://images.exploreindia.com/wildlife/gir-forest.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    },
+    {
+      "category": "Wild India",
+      "name": "Kanha National Park",
+      "location": {
+        "city": "Mandla",
+        "state": "Madhya Pradesh",
+        "stateId": "MP",
+        "googleMapsUrl": "https://maps.google.com/?q=Kanha+National+Park"
+      },
+      "summary": "A vast central Indian forest celebrated for Bengal tigers, barasingha, sal forests, and scenic grasslands.",
+      "details": {
+        "history": "The park was established as a protected area in the 20th century and became an important tiger conservation landscape.",
+        "architecture": "Sal forests, meadows, streams, and bamboo areas create a diverse natural setting.",
+        "culturalSignificance": "Kanha is a major wildlife conservation destination and an important habitat for the hard-ground barasingha."
+      },
+      "bestTimeToVisit": "October to June",
+      "keyHighlights": [
+        "Bengal Tigers",
+        "Barasingha",
+        "Jeep Safari"
+      ],
+      "travelTips": {
+        "dressCode": "Neutral outdoor clothing, sturdy shoes, and sun protection are recommended.",
+        "entryFee": "Safari fees and permits vary by zone and season.",
+        "photographyRules": "Photography is permitted from safari vehicles; flash and wildlife disturbance should be avoided."
+      },
+      "images": {
+        "mainBanner": "https://images.exploreindia.com/wildlife/kanha-main.jpg",
+        "gallery": [
+          "https://images.exploreindia.com/wildlife/kanha-tiger.jpg",
+          "https://images.exploreindia.com/wildlife/kanha-meadow.jpg"
+        ],
+        "userUploads": []
+      },
+      "isFallbackDefault": false,
+      "comments": []
+    }
+  ]
+}
