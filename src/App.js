@@ -1,6 +1,6 @@
 
 import './App.css';
-import {Routes, Route, Navigate} from 'react-router-dom';
+import {Routes, Route, Navigate, useLocation} from 'react-router-dom';
 import Navbar from './layouts/navbar/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,15 +18,22 @@ const ProtectedRoute = ({ children }) => {
 };
 
 function App() {
+
+  const {pathname} = useLocation();
+  const hiddenPaths = ['/admin/login', '/admin/dashboard', '/admin/places'];
+  const shouldHideNavbar = hiddenPaths.includes(pathname);
+
   return (
+    
     <>
-    <Navbar />
+    
+    {shouldHideNavbar || <Navbar />}
     <Routes>
       {/* Public Routes Go Here */}
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
       <Route path='/explore' element={<Explore />} />
-      <Route path='/place/:name' element={<PlaceDetails />} />
+      <Route path='/place/:placename' element={<PlaceDetails />} />
 
 
       {/* Protected Admin Routes */}
@@ -56,4 +63,4 @@ function App() {
   );
 }
 
-export default App;
+export default (App);

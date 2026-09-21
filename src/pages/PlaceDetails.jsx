@@ -3,14 +3,15 @@ import { Link, useParams } from 'react-router-dom';
 import jsonData from '../data.json';
 
 const PlaceDetails = () => {
-  const { name } = useParams();
-  const destination = (jsonData.destinations || []).find((item) => item.name === decodeURIComponent(name || ''));
-
+  const { placename } = useParams();
+  const destination = (jsonData.destinations || []).find((item) => item.placename === decodeURIComponent(placename || ''));
+  console.log('Destination:', destination); // Debugging line to check the value of destination
   if (!destination) return <main className="min-h-screen p-16 text-center"><h1 className="text-3xl font-bold">Place not found</h1><Link to="/" className="mt-4 inline-block text-orange-700">Back home</Link></main>;
 
   return (
     <main className="min-h-screen bg-amber-50/40 pb-16">
-      <div className="relative h-[48vh] min-h-[360px] bg-zinc-900">
+      <div className="relative">
+        <div className="relative h-[48vh] min-h-[360px] bg-zinc-900">
         <img src={destination.images?.mainBanner} alt={destination.name} className="h-full w-full object-cover opacity-75" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-6xl px-5 pb-10 text-white md:px-16">
@@ -34,6 +35,7 @@ const PlaceDetails = () => {
           <a href={destination.location.googleMapsUrl} target="_blank" rel="noreferrer" className="mt-6 block rounded-full bg-orange-600 px-5 py-3 text-center font-semibold text-white hover:bg-orange-700">Open in Maps</a>
         </aside>
       </div>
+    </div>
     </main>
   );
 };

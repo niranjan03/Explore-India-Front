@@ -1,6 +1,71 @@
-# Getting Started with Create React App
+# Explore India
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Explore India is a React travel discovery website for finding heritage sites, temples, mountain destinations, coastal locations, and wildlife experiences across India.
+
+The project uses a local JSON dataset, so visitors can search destinations without requiring an external API. Selecting a state shows all destinations in that state, while keyword search matches destination names, cities, states, and categories.
+
+## Features
+
+- Hero banner carousel with rotating destination themes
+- Search by state, place name, or keyword
+- Results page with destination cards and summaries
+- Individual destination detail pages
+- Best time to visit, highlights, travel tips, and Google Maps links
+- State-based destination carousel and category-based exploration
+- About page, newsletter section, and protected admin routes
+- Responsive layout built with Tailwind CSS
+
+## Technology
+
+- React 19 and React Router
+- Tailwind CSS and Create React App
+- Testing Library and Jest
+- Local data source: [`src/data.json`](src/data.json)
+
+## Project Structure
+
+```text
+src/
+├── components/           Reusable home and admin components
+├── context/              Shared content and state data
+├── layouts/              Navbar, footer, banner, map, and about layouts
+├── pages/                Home, about, search results, details, and admin pages
+├── data.json             Destination content
+├── App.js                Application routes
+└── index.css             Global styles and Tailwind directives
+```
+
+## Getting Started
+
+### Requirements
+
+- Node.js 18 or newer
+- npm
+
+Install dependencies and start the development server:
+
+```bash
+npm install
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in a browser.
+
+## Application Routes
+
+| Route | Description |
+| --- | --- |
+| `/` | Home page and destination search |
+| `/about` | About Explore India |
+| `/explore` | Search results page |
+| `/place/:name` | Destination details |
+| `/admin/login` | Admin login |
+| `/admin/dashboard` | Protected admin dashboard |
+| `/admin/places` | Protected place management |
+
+## Data Format
+
+Destinations are stored in `src/data.json`. Each destination includes its name, category, location, summary, historical details, highlights, travel tips, images, and map URL. Add or update entries in the `destinations` array to change the searchable content.
 
 ## Available Scripts
 

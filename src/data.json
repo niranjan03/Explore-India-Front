@@ -4,7 +4,7 @@
   "destinations": [
     {
       "category": "Heritage & Palaces",
-      "name": "Mysore Palace (Amba Vilas)",
+      "placename": "Mysore Palace (Amba Vilas)",
       "location": {
         "city": "Mysuru",
         "state": "Karnataka",
@@ -29,7 +29,7 @@
         "photographyRules": "Photography rules vary by section; photography may be restricted inside certain halls."
       },
       "images": {
-        "mainBanner": "https://images.exploreindia.com/palaces/mysore-main.jpg",
+        "mainBanner": "https://images.pexels.com/photos/9882016/pexels-photo-9882016.jpeg",
         "gallery": [
           "https://images.exploreindia.com/palaces/mysore-durbar.jpg",
           "https://images.exploreindia.com/palaces/mysore-night.jpg"
@@ -66,7 +66,7 @@
         "photographyRules": "Photography is generally permitted, subject to restrictions in selected areas."
       },
       "images": {
-        "mainBanner": "https://images.exploreindia.com/heritage/amber-fort-main.jpg",
+        "mainBanner": "https://images.pexels.com/photos/28054399/pexels-photo-28054399.jpeg",
         "gallery": [
           "https://images.exploreindia.com/heritage/amber-fort-courtyard.jpg",
           "https://images.exploreindia.com/heritage/amber-fort-view.jpg"
@@ -103,7 +103,7 @@
         "photographyRules": "Photography is generally allowed in designated areas, with restrictions in some museum sections."
       },
       "images": {
-        "mainBanner": "https://images.exploreindia.com/heritage/udaipur-city-palace-main.jpg",
+        "mainBanner": "https://images.pexels.com/photos/33230283/pexels-photo-33230283.jpeg",
         "gallery": [
           "https://images.exploreindia.com/heritage/udaipur-city-palace-courtyard.jpg",
           "https://images.exploreindia.com/heritage/udaipur-city-palace-lake.jpg"
