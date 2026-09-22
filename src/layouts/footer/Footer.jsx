@@ -7,7 +7,7 @@ const Footer = () => {
 
         </div>
         <div className='container mx-auto text-center'>
-            <p className='text-sm md:text-base'>© 2024 Explore India. All rights reserved.</p>
+            <p className='text-sm md:text-base'>© 2026 Explore India. All rights reserved.</p>
             <p className='text-sm md:text-base'>Follow us on 
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline ml-1'>Facebook</a>, 
                 <a href="https://www.pinterest.com/ExploringIndia20/" target="_blank" rel="noopener noreferrer" className='text-blue-400 hover:underline ml-1'>Pinterest</a>, and 
