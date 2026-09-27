@@ -6,7 +6,7 @@ import { Dialog } from '@headlessui/react';
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   return (
-    <div>
+    
         <header className='absolute top-0 inset-x-0 z-50'>
             <nav className="flex items-center justify-between w-full py-2 px-4 bg-white shadow-md">
                 <div className="flex lg:flex-1">
@@ -65,7 +65,7 @@ const Navbar = () => {
 
             </Dialog>
         </header>
-    </div>
+    
   )
 }
 

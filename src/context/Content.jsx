@@ -1,6 +1,7 @@
 export const navLinks = [
    { name: "Home", link: "/" },
-   { name: "About India", link: "/About" },
+  //  { name: "About India", link: "/About" },
+   { name:"Explore", link:"/Explore"},
    { name: "Palaces Visit", link: "/palaces-visit " },
    { name: "Plan Trip", link: "/plan-trip" },
    { name: "Blogs", link: "/blogs" },
@@ -29,6 +30,16 @@ export const palaces = [
       link: "/wildlife-national-parks",
    }
 ];
+
+export const quicklink=[
+  {name:'Explore', link:"/Explore"},
+  {name:"Contact", link:"Contact" }
+]
+export const policies=[
+  {name:"Cred", link:"/Cred"},
+  {name:"terms", link:"/Terms"},
+  {name:"Privacy Policy", link:"/privay-policy"},
+]
 
 
 export const travelCategories = [

@@ -4,6 +4,7 @@ import StateCarousel from '../components/StateCarousel'
 import Categorize from '../components/Categorize'
 import HomeBlogs from '../components/HomeBlogs'
 import Newsletter from '../components/Newsletter'
+import About from '../layouts/about/About'
 
 const Home = () => {
   
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <>
     <Banner externalSelectedState={activeStateFilter} />
+    <About />
 
     <StateCarousel onSelectState={handleStateSelectionFromCarousel} />
     <Categorize  />
