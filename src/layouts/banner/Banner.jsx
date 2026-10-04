@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { bannerSlides } from './bannerData';
-import jsonData from '../../data.json'
-const destinations = jsonData.destinations || [];
 
 const Banner = () => {
   const navigate = useNavigate();
   // Carousel
   const [currentSlide, setCurrentSlide] = useState(0);
-// State to track selected values
-  const [state, setState] = useState("");
-  const [name, setName] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const stateNames = [...new Set(destinations.map((destination) => destination.location.state))].sort();
 
   //Automatically cycle banner images and text every 5 sec
   useEffect(()=>{
@@ -23,19 +17,11 @@ const Banner = () => {
     return () => clearInterval(sliderTimer);
   },[]);
 
-
-  // Get the list of places based on the currently selected/hovered state
-  const availablePlaces = destinations
-    .filter((destination) => !state || destination.location.state === state)
-    .map((destination) => destination.name);
-
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     const params = new URLSearchParams();
-    if (state) params.set('state', state);
-    if (name) params.set('place', name);
     if (searchQuery.trim()) params.set('q', searchQuery.trim());
-    navigate(`/explore?${params.toString()}`);
+    navigate(`/Search${params.size ? `?${params.toString()}` : ''}`);
   };
 
   return (
@@ -78,51 +64,6 @@ const Banner = () => {
           className="bg-white/95 backdrop-blur-md p-4 md:p-3 rounded-2xl md:rounded-full shadow-2xl flex flex-col md:flex-row items-center gap-3 border border-white/20"
         >
           
-          {/* Dropdown 1: State Selection */}
-          <div className="w-full md:w-1/4 relative group px-3 border-b md:border-b-0 md:border-r border-gray-200 pb-3 md:pb-0">
-            <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
-              Select State
-            </label>
-            <select
-              value={state}
-              onChange={(e) => {
-                setState(e.target.value);
-                setName(""); // Reset 2nd dropdown when 1st changes
-              }}
-              className="w-full bg-transparent text-gray-800 font-medium focus:outline-none cursor-pointer appearance-none"
-            >
-              <option value="">All States</option>
-              {stateNames.map((stateKey) => (
-                <option 
-                  key={stateKey} 
-                  value={stateKey}
-                >
-                  {stateKey}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Dropdown 2: Dynamic Places Selection */}
-          <div className="w-full md:w-1/4 relative px-3 border-b md:border-b-0 md:border-r border-gray-200 pb-3 md:pb-0">
-            <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
-              Explore Place
-            </label>
-            <select
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full bg-transparent text-gray-800 font-medium focus:outline-none cursor-pointer appearance-none"
-              disabled={availablePlaces.length === 0}
-            >
-              <option value="">All Destinations</option>
-              {availablePlaces.map((place) => (
-                <option key={place} value={place}>
-                  {place}
-                </option>
-              ))}
-            </select>
-          </div>
-
           {/* Text Input Fields */}
           <div className="w-full md:flex-1 px-3 py-2 md:py-0">
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
