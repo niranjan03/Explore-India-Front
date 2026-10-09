@@ -1,68 +1,83 @@
 import React from 'react'
-import {navLinks} from '../../context/Content';
 import { Link } from 'react-router-dom';
 import logo from '../../assests/Images/Explore_India.png';
 import { Dialog } from '@headlessui/react';
+import { Menu, X } from 'lucide-react';
+
+const navLinks = [
+    { name: 'Destinations', link: '/Explore' },
+    { name: 'Themes & Experiences', link: '/#themes' },
+    { name: 'Seasons', link: '/#guides' },
+    { name: 'Itineraries', link: '/#itineraries' },
+    { name: 'Travel Journal', link: '/#journal' },
+];
+
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   return (
     
-        <header className='absolute top-0 inset-x-0 z-50'>
-            <nav className="flex items-center justify-between w-full py-2 px-4 bg-white shadow-md">
-                <div className="flex lg:flex-1">
-                    <Link to="/" className='m-1 p-1'>
-                    <span className='sr-only'>Explore India</span>
-                    <img src={logo} alt="logo" className='h-12 w-auto' />
-                    </Link>
-                </div>
-                <div className='flex lg:hidden'>
-                    <button
-                    type='button'
-                    onClick={()=> setMobileMenuOpen(true)}
-                    className='m-2.5  inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'
-                    >
-                    <span className="sr-only">Open main menu</span>
-
-                    </button>
-                </div>
-                <div className="hidden lg:flex lg:gap-x-12">
+        <header className='sticky top-0 z-50 border-b border-charcoal/5 bg-ivory/95 shadow-sm backdrop-blur'>
+            <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
+                <Link to="/" className='flex shrink-0 items-center gap-2'>
+                    <img src={logo} alt="" className='h-10 w-auto' />
+                    <span className='font-serif text-lg font-semibold text-charcoal'>Exploring India</span>
+                </Link>
+                <div className="hidden items-center gap-6 xl:flex">
                     {navLinks.map((item, index) => (
-                        <Link to={item.link} key={index} className='text-sm font-medium text-gray-700 hover:text-indigo-600'>
+                        <Link to={item.link} key={index} className='text-sm font-medium text-charcoal/75 transition hover:text-terracotta'>
                             {item.name}
                         </Link>
                     ))}
                 </div>
-                             
+                <div className="hidden items-center gap-3 lg:flex">
+                    <label className="sr-only" htmlFor="currency">Currency</label>
+                    <select id="currency" defaultValue="INR" className="bg-transparent text-sm font-medium text-charcoal focus:outline-none">
+                        <option>INR</option><option>USD</option><option>EUR</option>
+                    </select>
+                    <label className="sr-only" htmlFor="language">Language</label>
+                    <select id="language" defaultValue="EN" className="bg-transparent text-sm font-medium text-charcoal focus:outline-none">
+                        <option>EN</option><option>HI</option>
+                    </select>
+                    <Link to="/Explore" className="rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-terracotta-dark">
+                        Plan My Trip
+                    </Link>
+                </div>
+                <button
+                    type="button"
+                    onClick={() => setMobileMenuOpen(true)}
+                    className="rounded-lg p-2 text-charcoal hover:bg-surface xl:hidden"
+                    aria-label="Open main menu"
+                >
+                    <Menu aria-hidden="true" />
+                </button>
             </nav>
-            <Dialog className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen} >
-                <div classname='fixed inset-0 z-50'/>
-                <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10'>
+            <Dialog className='relative z-50 xl:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+                <div className='fixed inset-0 bg-charcoal/40' aria-hidden="true" />
+                <Dialog.Panel className='fixed inset-y-0 right-0 w-full max-w-sm overflow-y-auto bg-ivory px-6 py-6 shadow-xl'>
                     <div className='flex items-center justify-between'>
                         <Link to="/" className='m-1 p-1'>
-                            <span className='sr-only'>Explore India</span>
-                            <img src={logo} alt="logo" className='h-12 w-auto' />
+                            <span className='font-serif text-lg font-semibold text-charcoal'>Exploring India</span>
                         </Link>
                         <button
                         type='button'
                         onClick={()=> setMobileMenuOpen(false)}
-                        className='m-2.5 rounded-md p-2.5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'
+                        className='rounded-lg p-2 text-charcoal hover:bg-surface'
+                        aria-label="Close main menu"
                         >
-                        <span className="sr-only">Close main menu</span>
-
+                            <X aria-hidden="true" />
                         </button>
                     </div>
-                    <div className='mt-6 flow-root'>
-                        <div className='-my-6 divide-y divide-zinc-500/10'>
-                            <div className='space-y-2 py-6'>
-                                {navLinks.map((item, index) => (
-                                    <Link to={item.link} key={index} className='mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-zinc-900 hover:bg-zinc-400/10'>
-                                        {item.name}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    </div></Dialog.Panel> 
-
+                    <div className='mt-8 space-y-2'>
+                        {navLinks.map((item) => (
+                            <Link to={item.link} key={item.name} onClick={() => setMobileMenuOpen(false)} className='block rounded-lg px-3 py-3 text-base font-semibold text-charcoal hover:bg-surface hover:text-terracotta'>
+                                {item.name}
+                            </Link>
+                        ))}
+                        <Link to="/Explore" onClick={() => setMobileMenuOpen(false)} className="mt-4 block rounded-full bg-terracotta px-5 py-3 text-center font-semibold text-white hover:bg-terracotta-dark">
+                            Plan My Trip
+                        </Link>
+                    </div>
+                </Dialog.Panel>
             </Dialog>
         </header>
     

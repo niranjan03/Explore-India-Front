@@ -22,30 +22,30 @@ const PlaceDetails = () => {
   const mapsUrl = destination['Location (Google Map URL)'] || destination.location?.googleMapsUrl;
 
   return (
-    <main className="min-h-screen bg-amber-50/40 pb-16">
+    <main className="min-h-screen bg-ivory pb-16">
       <div className="relative">
         <div className="relative h-[48vh] min-h-[360px] bg-zinc-900">
         {image && <img src={image} alt={name} className="h-full w-full object-cover opacity-75" />}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-6xl px-5 pb-10 text-white md:px-16">
-          <Link to="/" className="text-sm font-semibold text-orange-300">← Back home</Link>
-          <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-orange-300">{category}</p>
+          <Link to="/" className="text-sm font-semibold text-marigold">← Back home</Link>
+          <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-marigold">{category}</p>
           <h1 className="mt-2 max-w-3xl font-serif text-4xl font-bold md:text-6xl">{name}</h1>
           <p className="mt-3 text-lg text-zinc-200">{[city, state].filter(Boolean).join(', ')}</p>
         </div>
       </div>
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1fr_320px] md:px-16">
         <section>
-          <p className="text-lg leading-8 text-zinc-700">{summary}</p>
-          <h2 className="mt-10 font-serif text-3xl font-bold text-zinc-900">A place with a story</h2>
-          <p className="mt-4 leading-7 text-zinc-600">{history}</p>
-          <h2 className="mt-8 font-serif text-3xl font-bold text-zinc-900">Highlights</h2>
-          <ul className="mt-4 grid gap-3 text-zinc-700 sm:grid-cols-2">{highlights.map((highlight) => <li key={highlight} className="rounded-lg bg-white p-4 shadow-sm">{highlight}</li>)}</ul>
+          <p className="text-lg leading-8 text-charcoal/85">{summary}</p>
+          <h2 className="mt-10 font-serif text-3xl font-bold text-charcoal">A place with a story</h2>
+          <p className="mt-4 leading-7 text-charcoal/75">{history}</p>
+          <h2 className="mt-8 font-serif text-3xl font-bold text-charcoal">Highlights</h2>
+          <ul className="mt-4 grid gap-3 text-charcoal sm:grid-cols-2">{highlights.map((highlight) => <li key={highlight} className="rounded-lg bg-surface p-4 shadow-sm">{highlight}</li>)}</ul>
         </section>
-        <aside className="h-fit rounded-2xl bg-white p-6 shadow-md">
-          <h2 className="font-serif text-2xl font-bold text-zinc-900">Plan your visit</h2>
-          <p className="mt-5 text-sm text-zinc-500">Best time</p><p className="font-semibold text-zinc-800">{bestTime}</p>
-          {mapsUrl && <a href={mapsUrl} target="_blank" rel="noreferrer" className="mt-6 block rounded-full bg-orange-600 px-5 py-3 text-center font-semibold text-white hover:bg-orange-700">Open in Maps</a>}
+        <aside className="h-fit rounded-2xl bg-surface p-6 shadow-md">
+          <h2 className="font-serif text-2xl font-bold text-charcoal">Plan your visit</h2>
+          <p className="mt-5 text-sm text-charcoal/60">Best time</p><p className="font-semibold text-charcoal">{bestTime}</p>
+          {mapsUrl && <a href={mapsUrl} target="_blank" rel="noreferrer" className="mt-6 block rounded-full bg-terracotta px-5 py-3 text-center font-semibold text-white hover:bg-terracotta-dark">Open in Maps</a>}
         </aside>
       </div>
     </div>

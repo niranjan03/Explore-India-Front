@@ -25,18 +25,18 @@ const Banner = () => {
   };
 
   return (
-    <div className='relative h-[90vh] w-full flex flex-col items-center justify-center bg-zinc-950 overflow-hidden'>
+    <div id="top" className='relative flex min-h-[680px] w-full flex-col items-center justify-center overflow-hidden bg-charcoal px-4 py-20 md:min-h-[740px]'>
       {/* background image carousel layout */}
       <div className="absolute inset-0 z-0">
       {bannerSlides.map((slide, index)=>(
       <div
       key={slide.id}
-      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index===currentSlide ? 'opacity-60' : 'opacity-0'}`}
+      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index===currentSlide ? 'opacity-65' : 'opacity-0'}`}
       >
         <img 
         src={slide.image}
         alt={slide.title}
-        className="w-full h-full objet-cover scale-105 transition-transform duration-[5000ms] ease-linear"
+        className="h-full w-full scale-105 object-cover transition-transform duration-[5000ms] ease-linear"
         />
       </div>      
       ))}
@@ -47,13 +47,13 @@ const Banner = () => {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mb-10 min-h-[180px] flex flex-col justify-center">
         <span className="text-orange-400 font-semibold tracking-widest text-xs md:text-sm uppercase block mb-3 transintion-all duration-500">
-          {bannerSlides[currentSlide].tagline}
+          Timeless India, thoughtfully explored
         </span>
         <h1 className="text-3xl md:text-6xl font-bold text-white tracking-tight drop-shadow-md font-serif mb-4 transintion-all duration-500">
-          {bannerSlides[currentSlide].title}
+          Discover the soul of India
         </h1>
         <p className="text-gray-200 text-base md:text-lg max-w-2xl mx-auto drop-shadow-sm font-light transintion-all duration-500">
-          {bannerSlides[currentSlide].description}
+          Curated journeys across storied heritage, sacred rivers, and wild landscapes.
         </p>
       </div>
       
@@ -67,11 +67,11 @@ const Banner = () => {
           {/* Text Input Fields */}
           <div className="w-full md:flex-1 px-3 py-2 md:py-0">
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
-              Keywords
+              Where to?
             </label>
             <input
               type="text"
-              placeholder="e.g. Temple, Beach, Trek..."
+              placeholder="Search a palace, place, or state"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-transparent text-gray-800 placeholder-gray-400 font-medium focus:outline-none"
@@ -81,7 +81,7 @@ const Banner = () => {
           {/* Submit Search Button */}
           <button
             type="submit"
-            className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-xl md:rounded-full hover:from-orange-600 hover:to-amber-600 transition-all duration-300 shadow-md hover:shadow-orange-500/20 flex items-center justify-center gap-2"
+            className="w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-terracotta px-8 py-4 font-semibold text-white shadow-md transition-all duration-300 hover:bg-terracotta-dark md:rounded-full"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />

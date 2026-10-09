@@ -36,33 +36,33 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-20 py-16 md:py-16">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-900 via-stone-900 to-zinc-950 px-8 py-12 md:p-16 shadow-2xl border border-white/5">
+    <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-20">
+      <div className="relative overflow-hidden rounded-3xl bg-peacock px-8 py-12 shadow-xl md:p-16">
         
         {/* Background Ambient Decorative Light Rings */}
-        <div className="absolute top-0 right-0 -mt-12 -mr-12 w-72 h-72 bg-orange-600/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -mb-12 -ml-12 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="pointer-events-none absolute -right-12 -top-12 h-72 w-72 rounded-full bg-marigold/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-12 -left-12 h-72 w-72 rounded-full bg-terracotta/20 blur-3xl" />
 
         {/* Core Layout Grid */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Block: Heading & Copy Text */}
           <div className="lg:col-span-7 space-y-4">
-            <span className="text-orange-400 font-bold uppercase tracking-widest text-xs block">
-              Join The Expedition
+            <span className="block text-xs font-bold uppercase tracking-widest text-marigold">
+              A note from India
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-white font-serif tracking-tight leading-tight">
-              Get Rare Travel Itineraries <br />& Hidden Gems Across India
+            <h2 className="font-serif text-2xl font-bold leading-tight tracking-tight text-white md:text-4xl">
+              Monthly itineraries &amp; off-beat travel curations
             </h2>
-            <p className="text-zinc-400 text-sm md:text-base font-light max-w-xl leading-relaxed">
-              Subscribe to our weekly dispatch. No spam, just curated historical deep-dives, pristine beaches, and mountain guides sent straight to your inbox[cite: 59].
+            <p className="max-w-xl text-sm font-light leading-relaxed text-white/75 md:text-base">
+              Get thoughtful route ideas, destination stories, and practical inspiration for your next journey.
             </p>
           </div>
 
           {/* Right Block: Input Action Form Form utilities */}
           <div className="lg:col-span-5 w-full">
             <form onSubmit={handleSubscribe} className="space-y-3">
-              <div className="flex flex-col sm:flex-row items-center gap-3 bg-white/5 p-2 rounded-2xl sm:rounded-full border border-white/10 backdrop-blur-md focus-within:border-orange-500/50 transition-all">
+              <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/20 bg-white/10 p-2 backdrop-blur-md transition-all focus-within:border-marigold sm:flex-row sm:rounded-full">
                 
                 {/* Email Input Field */}
                 <div className="w-full flex-1 px-4 py-2 sm:py-0">
@@ -73,7 +73,7 @@ export default function Newsletter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="w-full bg-transparent text-white placeholder-zinc-500 font-medium text-sm outline-none border-none focus:ring-0"
+                    className="w-full bg-transparent text-sm font-medium text-white outline-none placeholder:text-white/55 focus:ring-0"
                   />
                 </div>
 
@@ -81,7 +81,7 @@ export default function Newsletter() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-semibold text-sm rounded-xl sm:rounded-full shadow-lg shadow-orange-950/20 transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50"
+                  className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-terracotta px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-terracotta-dark disabled:opacity-50 sm:w-auto sm:rounded-full"
                 >
                   {loading ? (
                     <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -99,7 +99,7 @@ export default function Newsletter() {
               {/* Dynamic Submition Feedback Alerts */}
               {status.message && (
                 <p className={`text-xs font-medium pl-4 ${
-                  status.type === 'success' ? 'text-emerald-400' : 'text-rose-400'
+                  status.type === 'success' ? 'text-green-200' : 'text-red-200'
                 }`}>
                   {status.message}
                 </p>
