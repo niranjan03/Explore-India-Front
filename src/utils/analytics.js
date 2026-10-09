@@ -1,4 +1,4 @@
-function startAnalytics() {
+ export function startAnalytics() {
   const API_URL = 'https://explore-india-server.onrender.com/api/analytics/track';
   let startedAt = Date.now();
 

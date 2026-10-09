@@ -12,7 +12,9 @@ import Explore from './pages/Explore';
 import PlaceDetails from './pages/PlaceDetails';
 import Search from './pages/Search'
 import NotFound from './pages/NotFound';
-import {startAnalytics} from './utils/analytics'
+// import {startAnalytics} from './utils/analytics'
+
+
 
 // Simple guard checking for the presence of your admin access token
 const ProtectedRoute = ({ children }) => {
@@ -21,9 +23,9 @@ const ProtectedRoute = ({ children }) => {
 };
 
 function App() {
-  useEffect(() => {
-    startAnalytics();
-  }, []);
+  // useEffect(() => {
+  //   startAnalytics();
+  // }, []);
 
   const {pathname} = useLocation();
   const hiddenPaths = ['/admin/login', '/admin/dashboard', '/admin/places'];
