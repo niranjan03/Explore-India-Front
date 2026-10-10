@@ -22,13 +22,15 @@ export default function PageMeta({ title, description, path, schema, robots = 'i
     }
     robotsTag.content = robots;
 
-    let canonicalTag = document.querySelector('link[rel="canonical"]');
-    if (!canonicalTag) {
-      canonicalTag = document.createElement('link');
-      canonicalTag.rel = 'canonical';
-      document.head.appendChild(canonicalTag);
+    const canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (path) {
+      const tag = canonicalTag || document.createElement('link');
+      tag.rel = 'canonical';
+      tag.href = `https://www.exploring-india.com${path}`;
+      if (!canonicalTag) document.head.appendChild(tag);
+    } else if (canonicalTag) {
+      canonicalTag.remove();
     }
-    canonicalTag.href = `https://www.exploring-india.com${path}`;
 
     document.querySelectorAll('script[data-page-schema="true"]').forEach((script) => script.remove());
     const pageSchema = JSON.parse(serializedSchema);

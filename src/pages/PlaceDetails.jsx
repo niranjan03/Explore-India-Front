@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import PageMeta from '../components/PageMeta';
+import NotFound from './NotFound';
 import jsonData from '../data.json';
 
 const PlaceDetails = () => {
   const { placename } = useParams();
   const destination = (jsonData.destinations || []).find((item) => (item.Name || item.placename) === placename);
-  if (!destination) return <main className="min-h-screen p-16 text-center"><h1 className="text-3xl font-bold">Place not found</h1><Link to="/" className="mt-4 inline-block text-orange-700">Back home</Link></main>;
+  if (!destination) {
+    return (
+      <NotFound
+        title="Destination not found"
+        description="We couldn’t find that place in our destination guides. Browse all destinations or search for another place."
+      />
+    );
+  }
 
   const name = destination.Name || destination.name || destination.placename;
   const city = destination.City || destination.location?.city;
