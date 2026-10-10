@@ -18,7 +18,7 @@ export default function HomeBlogs() {
         
         {/* Above-Right View More Action Anchor */}
         <a 
-          href="/blogs" 
+          href="/journal"
           className="mt-4 flex items-center gap-2 self-start text-sm font-semibold text-terracotta transition-colors duration-200 hover:text-terracotta-dark sm:mt-0 sm:self-auto"
         >
           <span>View All Articles</span>

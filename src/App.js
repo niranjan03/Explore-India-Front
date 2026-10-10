@@ -8,7 +8,11 @@ import Footer from './layouts/footer/Footer';
 import AdminLogin from './components/admin/AdminLogin';
 import DashboardOverview from './pages/admin/DashboardOverview';
 import ManagePlaces from './pages/admin/ManagePlaces';
-import Explore from './pages/Explore';
+import Explore, { DestinationCity } from './pages/Explore';
+import Experiences from './pages/Experiences';
+import Seasons from './pages/Seasons';
+import Itineraries from './pages/Itineraries';
+import Journal, { JournalArticle } from './pages/Journal';
 import PlaceDetails from './pages/PlaceDetails';
 import Search from './pages/Search'
 import NotFound from './pages/NotFound';
@@ -41,7 +45,19 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
       <Route path='/Search' element={<Search />} />
-      <Route path='/Explore' element={<Explore/>}/>
+      <Route path='/destinations/' element={<Explore/>}/>
+      <Route path='/destinations/:state/:city' element={<DestinationCity/>}/>
+      <Route path='/Explore' element={<Navigate to="/destinations/" replace/>}/>
+      <Route path='/experiences' element={<Experiences/>}/>
+      <Route path='/experiences/:themeName' element={<Experiences/>}/>
+      <Route path='/seasons' element={<Seasons/>}/>
+      <Route path='/seasons/:month' element={<Seasons/>}/>
+      <Route path='/itineraries' element={<Itineraries/>}/>
+      <Route path='/itineraries/:routeSlug' element={<Itineraries/>}/>
+      <Route path='/journal' element={<Journal/>}/>
+      <Route path='/journal/:articleSlug' element={<JournalArticle/>}/>
+      <Route path='/blogs' element={<Navigate to="/journal" replace/>}/>
+      <Route path='/blog/:articleSlug' element={<JournalArticle/>}/>
       <Route path='/place/:placename' element={<PlaceDetails />} />
       <Route path="*" element={<NotFound />} />
 

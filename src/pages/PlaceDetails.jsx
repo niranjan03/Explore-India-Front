@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import jsonData from '../data.json';
 
 const PlaceDetails = () => {
@@ -20,9 +21,39 @@ const PlaceDetails = () => {
     : destination.keyHighlights || [];
   const bestTime = destination['Best Time to visit'] || destination.bestTimeToVisit;
   const mapsUrl = destination['Location (Google Map URL)'] || destination.location?.googleMapsUrl;
+  const canonicalPath = `/place/${encodeURIComponent(name)}`;
+  const schema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TouristDestination',
+      name,
+      description: summary,
+      image,
+      containedInPlace: {
+        '@type': 'AdministrativeArea',
+        name: [city, state].filter(Boolean).join(', '),
+      },
+      touristType: category,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.exploring-india.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://www.exploring-india.com/destinations/' },
+        { '@type': 'ListItem', position: 3, name },
+      ],
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-ivory pb-16">
+      <PageMeta
+        title={`${name}${state ? `, ${state}` : ''} Travel Guide | Exploring India`}
+        description={summary || `Plan a visit to ${name}${state ? ` in ${state}` : ''}. Explore highlights, practical tips, and the best time to visit.`}
+        path={canonicalPath}
+        schema={schema}
+      />
       <div className="relative">
         <div className="relative h-[48vh] min-h-[360px] bg-zinc-900">
         {image && <img src={image} alt={name} className="h-full w-full object-cover opacity-75" />}

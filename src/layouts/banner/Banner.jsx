@@ -50,10 +50,10 @@ const Banner = () => {
           Timeless India, thoughtfully explored
         </span>
         <h1 className="text-3xl md:text-6xl font-bold text-white tracking-tight drop-shadow-md font-serif mb-4 transintion-all duration-500">
-          Discover the soul of India
+          Explore India: Your Ultimate Guide to Destinations &amp; Culture
         </h1>
         <p className="text-gray-200 text-base md:text-lg max-w-2xl mx-auto drop-shadow-sm font-light transintion-all duration-500">
-          Curated journeys across storied heritage, sacred rivers, and wild landscapes.
+          Your first-time travel guide to India, with curated destinations, storied heritage, sacred rivers, and wild landscapes.
         </p>
       </div>
       

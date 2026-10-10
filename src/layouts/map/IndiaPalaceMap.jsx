@@ -31,7 +31,7 @@ export default function IndiaPalaceMap() {
       {/* LEFT SECTION: Interactive SVG Map & Controls */}
       <div className="w-full lg:w-2/3 bg-white p-6 rounded-2xl shadow-md flex flex-col justify-between">
         <div>
-          <h1 className="text-3xl font-serif font-bold text-emerald-800 mb-2">Explore Incredible India</h1>
+          <h2 className="text-3xl font-serif font-bold text-emerald-800 mb-2">Explore Incredible India</h2>
           <p className="text-gray-600 text-sm mb-6">Select an interest metric below and tap on any state to unlock regional gems instantly.</p>
           
           {/* Categories Selector Strip */}

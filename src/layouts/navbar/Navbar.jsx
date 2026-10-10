@@ -5,11 +5,11 @@ import { Dialog } from '@headlessui/react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-    { name: 'Destinations', link: '/Explore' },
-    { name: 'Themes & Experiences', link: '/#themes' },
-    { name: 'Seasons', link: '/#guides' },
-    { name: 'Itineraries', link: '/#itineraries' },
-    { name: 'Travel Journal', link: '/#journal' },
+    { name: 'Destinations', link: '/destinations/' },
+    { name: 'Themes & Experiences', link: '/experiences' },
+    { name: 'Seasons', link: '/seasons' },
+    { name: 'Itineraries', link: '/itineraries' },
+    { name: 'Travel Journal', link: '/journal' },
 ];
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
                     <select id="language" defaultValue="EN" className="bg-transparent text-sm font-medium text-charcoal focus:outline-none">
                         <option>EN</option><option>HI</option>
                     </select>
-                    <Link to="/Explore" className="rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-terracotta-dark">
+                    <Link to="/destinations/" className="rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-terracotta-dark">
                         Plan My Trip
                     </Link>
                 </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                                 {item.name}
                             </Link>
                         ))}
-                        <Link to="/Explore" onClick={() => setMobileMenuOpen(false)} className="mt-4 block rounded-full bg-terracotta px-5 py-3 text-center font-semibold text-white hover:bg-terracotta-dark">
+                        <Link to="/destinations/" onClick={() => setMobileMenuOpen(false)} className="mt-4 block rounded-full bg-terracotta px-5 py-3 text-center font-semibold text-white hover:bg-terracotta-dark">
                             Plan My Trip
                         </Link>
                     </div>

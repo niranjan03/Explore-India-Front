@@ -1,11 +1,11 @@
 import React from 'react'
 import IndiaPalaceMap from '../layouts/map/IndiaPalaceMap'
-import AboutCon from '../layouts/about/Aboutban'
+import About from '../layouts/about/About'
 
 const About = () => {
     return (
         <div>
-            <AboutCon/>
+            <About/>
                 <IndiaPalaceMap />
         </div>
     )

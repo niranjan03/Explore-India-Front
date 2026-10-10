@@ -11,10 +11,10 @@ export default function Categorize({ onSelectCategory }) {
           Find your kind of India
         </span>
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 font-serif tracking-tight">
-          Journeys for every curiosity
+          Best Places to Visit in India
         </h2>
         <p className="text-zinc-600 text-sm md:text-base mt-2 max-w-xl">
-          From royal forts to quiet coastlines, start with the experiences that draw you in.
+          This India tourism guide helps you explore top tourist attractions in India, from royal forts to quiet coastlines.
         </p>
       </div>
 

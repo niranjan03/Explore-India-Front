@@ -28,6 +28,33 @@ const travelGuides = [
   { title: 'Eat with curiosity', text: 'Explore regional food at a comfortable pace. Share dietary needs clearly and ask about spice levels when ordering.' },
 ];
 
+const travelClusters = [
+  {
+    title: 'The Classic Tourist Route',
+    description: 'Plan a Golden Triangle guide through Delhi, Agra, and Jaipur, with route ideas for a three- to seven-day trip.',
+    topics: ['Delhi Guide', 'Agra & Taj Mahal', 'Jaipur Forts'],
+    query: 'Delhi',
+  },
+  {
+    title: 'Adventure & Mountain Escapes',
+    description: 'Find inspiration for high-altitude journeys, mountain roads, and trekking trails across Himachal Pradesh and Uttarakhand.',
+    topics: ['Spiti Valley', 'Auli Skiing', 'Leh-Ladakh Route'],
+    query: 'Himachal Pradesh',
+  },
+  {
+    title: 'Coastal, Cultural & Tropical Trails',
+    description: 'Explore tropical backwaters, temple towns, historic ruins, and laid-back beaches across southern and coastal India.',
+    topics: ['Kerala Backwaters', 'Goa Beaches', 'Hampi Ruins'],
+    query: 'Kerala',
+  },
+  {
+    title: 'Offbeat & Lesser-Known India',
+    description: 'Discover the cultural landscapes and quieter escapes of North East India, from river islands to mountain valleys.',
+    topics: ['Majuli Island', 'Dzukou Valley', 'Ziro Valley'],
+    query: 'Assam',
+  },
+];
+
 const getImage = (place) => place?.images?.[0]?.original || place?.images?.[0]?.url;
 
 function RegionExplorer() {
@@ -42,9 +69,9 @@ function RegionExplorer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-terracotta">A country of many worlds</p>
-          <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">Find your corner of India</h2>
+          <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">Top Destinations to Explore in India</h2>
           <p className="mt-4 max-w-lg leading-7 text-charcoal/70">
-            Choose a region to discover places and experiences from across the local collection.
+            Explore India travel destinations by region, from Himalayan horizons and historic cities to tropical coastlines.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2">
             {regions.map((region) => (
@@ -97,7 +124,10 @@ function ItineraryIdeas() {
       <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-terracotta">Start with a route</p>
-          <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">A few ways to see more</h2>
+          <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">Curated Travel Itineraries by Region</h2>
+          <p className="mt-3 max-w-2xl leading-7 text-charcoal/70">
+            Find India travel itineraries for a classic first journey, a gentle southern escape, or a Himalayan adventure.
+          </p>
         </div>
         <Link to="/Explore" className="font-semibold text-terracotta hover:text-terracotta-dark">Explore all destinations <span aria-hidden="true">→</span></Link>
       </div>
@@ -129,17 +159,55 @@ function ItineraryIdeas() {
   );
 }
 
+function TravelContentClusters() {
+  return (
+    <section className="bg-surface py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="mb-10 max-w-3xl">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-terracotta">Find a journey that speaks to you</p>
+          <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">Explore India by Journey</h2>
+          <p className="mt-4 leading-7 text-charcoal/70">
+            From classic first-time routes to offbeat escapes, explore travel ideas across India’s regions and landscapes.
+          </p>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {travelClusters.map((cluster) => (
+            <article key={cluster.title} className="rounded-2xl border border-charcoal/10 bg-ivory p-6 md:p-8">
+              <h3 className="font-serif text-2xl font-semibold text-charcoal">{cluster.title}</h3>
+              <p className="mt-3 leading-7 text-charcoal/70">{cluster.description}</p>
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {cluster.topics.map((topic) => (
+                  <li key={topic} className="rounded-full bg-peacock/10 px-3 py-1.5 text-sm font-medium text-peacock">
+                    {topic}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to={`/Search?q=${encodeURIComponent(cluster.query)}`}
+                className="mt-6 inline-flex font-semibold text-terracotta transition hover:text-terracotta-dark"
+              >
+                Explore this journey <span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TravelGuides() {
   return (
     <section id="guides" className="bg-peacock py-16 text-white md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-marigold">Good to know before you go</p>
-        <h2 className="font-serif text-3xl font-semibold md:text-4xl">A little preparation goes a long way</h2>
+        <h2 className="font-serif text-3xl font-semibold md:text-4xl">Practical Travel Tips &amp; Essentials</h2>
+        <h3 className="mt-3 text-lg font-semibold text-white/90">Best time to visit, transportation, and local etiquette</h3>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {travelGuides.map((guide, index) => (
             <article key={guide.title} className="rounded-2xl border border-white/15 bg-white/5 p-6">
               <span className="font-serif text-3xl text-marigold">0{index + 1}</span>
-              <h3 className="mt-5 font-serif text-xl font-semibold">{guide.title}</h3>
+              <h4 className="mt-5 font-serif text-xl font-semibold">{guide.title}</h4>
               <p className="mt-3 text-sm leading-6 text-white/75">{guide.text}</p>
             </article>
           ))}
@@ -155,7 +223,10 @@ function DestinationNotes() {
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <div className="mb-8">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-terracotta">The places stay with you</p>
-        <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">A glimpse of the journey</h2>
+        <h2 className="font-serif text-3xl font-semibold text-charcoal md:text-4xl">Uncover India’s Hidden Gems &amp; Heritage</h2>
+        <p className="mt-3 max-w-2xl leading-7 text-charcoal/70">
+          Discover memorable places and cultural heritage across some of the best destinations to explore in India.
+        </p>
       </div>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {notes.map((place, index) => (
@@ -180,6 +251,7 @@ const Home = () => (
     <Categorize />
     <RegionExplorer />
     <ItineraryIdeas />
+    <TravelContentClusters />
     <TravelGuides />
     <DestinationNotes />
     <section id="journal">
