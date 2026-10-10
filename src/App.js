@@ -16,6 +16,9 @@ import Journal, { JournalArticle } from './pages/Journal';
 import PlaceDetails from './pages/PlaceDetails';
 import Search from './pages/Search'
 import NotFound from './pages/NotFound';
+import Credits from './pages/Credits';
+import Terms from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 // import {startAnalytics} from './utils/analytics'
 
 
@@ -44,6 +47,10 @@ function App() {
       {/* Public Routes Go Here */}
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
+      <Route path='/abouts' element={<Navigate to="/about" replace/>} />
+      <Route path='/credits' element={<Credits/>} />
+      <Route path='/terms' element={<Terms/>} />
+      <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
       <Route path='/Search' element={<Search />} />
       <Route path='/destinations/' element={<Explore/>}/>
       <Route path='/destinations/:state/:city' element={<DestinationCity/>}/>

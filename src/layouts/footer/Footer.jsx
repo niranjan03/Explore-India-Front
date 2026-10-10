@@ -1,7 +1,18 @@
 import React from 'react'
 import logo from '../../assests/Images/Explore_India.png'
 import {Link} from 'react-router-dom'
-import { quicklink, policies } from '../../context/Content'
+
+const quickLinks = [
+  { name: 'Destinations', link: '/destinations/' },
+  { name: 'Travel Journal', link: '/journal' },
+  { name: 'About', link: '/about' },
+];
+
+const trustLinks = [
+  { name: 'Credits', link: '/credits' },
+  { name: 'Terms of Service', link: '/terms' },
+  { name: 'Privacy Policy', link: '/privacy-policy' },
+];
 
 const Footer = () => {
   return (
@@ -20,8 +31,8 @@ const Footer = () => {
           <div className='py-1 px-2' >
             <h2 className='mb-6 text-sm font-semibold uppercase tracking-wider text-marigold'>Quick links</h2>
             <ul className='font-medium text-white/70'>
-              {quicklink.map((items,index)=>(
-                <li className='mb-4' key={index}>
+              {quickLinks.map((items)=>(
+                <li className='mb-4' key={items.name}>
                   <Link to={items.link} className='transition hover:text-white'>{items.name}</Link>
                 </li>
               ))}
@@ -30,8 +41,8 @@ const Footer = () => {
           <div className='py-1 px-2'>
             <h2 className='mb-6 text-sm font-semibold uppercase tracking-wider text-marigold'>Policies</h2>
             <ul className='font-medium text-white/70'>
-              {policies.map((items,index)=>(
-                <li className='mb-4' key={index}>
+              {trustLinks.map((items)=>(
+                <li className='mb-4' key={items.name}>
                   <Link to={items.link} className='transition hover:text-white'>{items.name}</Link>
                 </li>
               ))}

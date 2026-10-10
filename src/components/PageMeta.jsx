@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function PageMeta({ title, description, path, schema }) {
+export default function PageMeta({ title, description, path, schema, robots = 'index, follow' }) {
   const serializedSchema = JSON.stringify(schema || null);
 
   useEffect(() => {
@@ -13,6 +13,14 @@ export default function PageMeta({ title, description, path, schema }) {
       document.head.appendChild(descriptionTag);
     }
     descriptionTag.content = description;
+
+    let robotsTag = document.querySelector('meta[name="robots"]');
+    if (!robotsTag) {
+      robotsTag = document.createElement('meta');
+      robotsTag.name = 'robots';
+      document.head.appendChild(robotsTag);
+    }
+    robotsTag.content = robots;
 
     let canonicalTag = document.querySelector('link[rel="canonical"]');
     if (!canonicalTag) {
@@ -31,7 +39,7 @@ export default function PageMeta({ title, description, path, schema }) {
       script.textContent = JSON.stringify(item);
       document.head.appendChild(script);
     });
-  }, [title, description, path, serializedSchema]);
+  }, [title, description, path, robots, serializedSchema]);
 
   return null;
 }
